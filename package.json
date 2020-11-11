@@ -1,0 +1,17 @@
+{
+  "name": "challenges",
+  "version": "1.0.0",
+  "description": "challenges available for testing with jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test-watch": "jest --watch",
+    "start": "node solution.js",
+    "dev": "nodemon solution.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "nodemon": "^2.0.6"
+  }
+}
