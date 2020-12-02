@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "date-fns": "^2.16.1",
+    "faker": "^5.1.0",
     "lodash": "^4.17.20",
     "nodemon": "^2.0.6"
   }
