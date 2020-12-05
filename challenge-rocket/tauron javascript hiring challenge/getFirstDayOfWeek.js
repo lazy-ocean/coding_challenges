@@ -3,7 +3,7 @@ Write getFirstDayOfWeek() function that takes a timestamp and returns the timest
 
 function getFirstDayOfWeek(timestamp) {
   let date = new Date(timestamp);
-  var months = [
+  const months = [
     "Jan",
     "Feb",
     "Mar",
