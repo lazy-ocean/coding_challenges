@@ -15,6 +15,7 @@ module.exports = {
     quotes: 0,
     "no-plusplus": "off",
     "no-console": "off",
+    "comma-dangle": "off",
     "max-len": ["error", { ignoreComments: true }],
   },
 };
