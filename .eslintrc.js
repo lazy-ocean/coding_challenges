@@ -17,6 +17,8 @@ module.exports = {
     "no-console": "off",
     "comma-dangle": "off",
     "max-len": ["error", { ignoreComments: true }],
-    "no-param-reassign": "warning",
+    "no-param-reassign": 1,
+    "implicit-arrow-linebreak": "off",
+    "function-paren-newline": "off",
   },
 };
