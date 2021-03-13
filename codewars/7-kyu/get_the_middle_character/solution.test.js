@@ -1,8 +1,10 @@
 const solution = require("./solution");
 
 const tests = {
-  1: [[1, 2], 3],
-  2: [[1, 5], 6],
+  even: [["test"], "es"],
+  odd1: [["testing"], "t"],
+  even1: [["middle"], "dd"],
+  "one letter": [["A"], "A"],
 };
 
 Object.keys(tests).forEach((testKey) => {

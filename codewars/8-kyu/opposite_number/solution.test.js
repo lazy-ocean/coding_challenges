@@ -1,8 +1,11 @@
 const solution = require("./solution");
 
 const tests = {
-  1: [[1, 2], 3],
-  2: [[1, 5], 6],
+  1: [[6], -6],
+  2: [[4], -4],
+  3: [[0], 0],
+  4: [[-1], 1],
+  5: [[-34], 34],
 };
 
 Object.keys(tests).forEach((testKey) => {

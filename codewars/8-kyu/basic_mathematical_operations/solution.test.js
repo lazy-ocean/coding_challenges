@@ -1,8 +1,10 @@
 const solution = require("./solution");
 
 const tests = {
-  1: [[1, 2], 3],
-  2: [[1, 5], 6],
+  1: [["+", 4, 7], 11],
+  2: [["-", 15, 18], -3],
+  3: [["*", 5, 5], 25],
+  4: [["/", 49, 7], 7],
 };
 
 Object.keys(tests).forEach((testKey) => {
