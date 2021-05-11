@@ -6,7 +6,7 @@ module.exports = {
     node: true,
     "jest/globals": true,
   },
-  extends: ["airbnb-base"],
+  extends: ["airbnb-base", "prettier"],
   parserOptions: {
     ecmaVersion: 12,
   },
@@ -16,7 +16,6 @@ module.exports = {
     "no-plusplus": "off",
     "no-console": "off",
     "comma-dangle": "off",
-    "max-len": ["error", { ignoreComments: true }],
     "no-param-reassign": 1,
     "implicit-arrow-linebreak": "off",
     "function-paren-newline": "off",
