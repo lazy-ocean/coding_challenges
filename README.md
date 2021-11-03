@@ -7,7 +7,7 @@ A simple set-up to crack code challenges, executing in VS Code and testing with 
 ### You'll need on your computer:
 
 - Node.js
-- npm
+- npm / yarn
 - [Jest](https://jestjs.io/) (testing)
 - [nodemon](https://nodemon.io/) (watching for changes and executing JavaScript code in the console)
 
@@ -43,11 +43,11 @@ $ nodemon ./folder-name/solution.js
 5. To run tests:
 
 ```
-$ jest ./folder-name
+$ yarn test ./folder-name
 ```
 
 or with testing on every save
 
 ```
-$ jest ./folder-name --watch
+$ yarn test ./folder-name --watch
 ```
