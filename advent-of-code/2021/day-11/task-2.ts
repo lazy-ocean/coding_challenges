@@ -64,58 +64,26 @@ const countFlashes = (data: number[][]) => {
   let steps = 1;
 
   const flashed = (i: number, j: number) => {
-    if (octopuses[i - 1]) {
-      if (typeof octopuses[i - 1][j - 1] === "number") {
-        if (octopuses[i - 1][j - 1] === 9) {
-          octopuses[i - 1][j - 1] = "flashed";
-          flashed(i - 1, j - 1);
-        } else octopuses[i - 1][j - 1]++;
+    const grid = [
+      [i - 1, j - 1],
+      [i - 1, j],
+      [i - 1, j + 1],
+      [i, j - 1],
+      [i, j + 1],
+      [i + 1, j - 1],
+      [i + 1, j],
+      [i + 1, j + 1],
+    ];
+    grid.forEach(([x, y]) => {
+      if (octopuses[x]) {
+        if (typeof octopuses[x][y] === "number") {
+          if (octopuses[x][y] === 9) {
+            octopuses[x][y] = "flashed";
+            flashed(x, y);
+          } else octopuses[x][y]++;
+        }
       }
-      if (typeof octopuses[i - 1][j] === "number") {
-        if (octopuses[i - 1][j] === 9) {
-          octopuses[i - 1][j] = "flashed";
-          flashed(i - 1, j);
-        } else octopuses[i - 1][j]++;
-      }
-      if (typeof octopuses[i - 1][j + 1] === "number") {
-        if (octopuses[i - 1][j + 1] === 9) {
-          octopuses[i - 1][j + 1] = "flashed";
-          flashed(i - 1, j + 1);
-        } else octopuses[i - 1][j + 1]++;
-      }
-    }
-    if (typeof octopuses[i][j - 1] === "number") {
-      if (octopuses[i][j - 1] === 9) {
-        octopuses[i][j - 1] = "flashed";
-        flashed(i, j - 1);
-      } else octopuses[i][j - 1]++;
-    }
-    if (typeof octopuses[i][j + 1] === "number") {
-      if (octopuses[i][j + 1] === 9) {
-        octopuses[i][j + 1] = "flashed";
-        flashed(i, j + 1);
-      } else octopuses[i][j + 1]++;
-    }
-    if (octopuses[i + 1]) {
-      if (typeof octopuses[i + 1][j - 1] === "number") {
-        if (octopuses[i + 1][j - 1] === 9) {
-          octopuses[i + 1][j - 1] = "flashed";
-          flashed(i + 1, j - 1);
-        } else octopuses[i + 1][j - 1]++;
-      }
-      if (typeof octopuses[i + 1][j] === "number") {
-        if (octopuses[i + 1][j] === 9) {
-          octopuses[i + 1][j] = "flashed";
-          flashed(i + 1, j);
-        } else octopuses[i + 1][j]++;
-      }
-      if (typeof octopuses[i + 1][j + 1] === "number") {
-        if (octopuses[i + 1][j + 1] === 9) {
-          octopuses[i + 1][j + 1] = "flashed";
-          flashed(i + 1, j + 1);
-        } else octopuses[i + 1][j + 1]++;
-      }
-    }
+    });
   };
 
   while (steps <= 1000) {
