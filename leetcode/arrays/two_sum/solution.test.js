@@ -1,4 +1,4 @@
-const solution = require("./solution");
+const solution = require("./solution2");
 
 const tests = {
   "2 + 4 = 6": [
@@ -24,7 +24,7 @@ Object.keys(tests).forEach((testKey) => {
   test(testKey, () => {
     // eslint-disable-next-line no-unused-expressions
     Array.isArray(args)
-      ? expect(solution(...args)).toStrictEqual(tests[testKey][1])
-      : expect(solution(args)).toStrictEqual(tests[testKey][1]);
+      ? expect(solution(...args).sort()).toStrictEqual(tests[testKey][1])
+      : expect(solution(args).sort()).toStrictEqual(tests[testKey][1]);
   });
 });
