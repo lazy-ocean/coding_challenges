@@ -27,8 +27,8 @@ const twoSums2 = (nums: number[], target: number): number[] => {
   for (let i = 0; i < nums.length; i++) {
     // checking up what's left to add to get the target
     const temp = target - nums[i];
-    // if we already have needed number in our set and it is a different number from set, we return two indices
-    if (map.has(temp) && map.get(temp) !== i) return [i, map.get(temp)];
+    // if we already have needed number in our set, we return two indices
+    if (map.has(temp)) return [i, map.get(temp)];
     // if we dont have needed num in our set, we add up this one to the set with its index
     map.set(nums[i], i);
   }
