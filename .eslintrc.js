@@ -36,6 +36,7 @@ module.exports = {
     "@typescript-eslint/no-var-requires": 0,
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
+    "no-unused-expressions": "warn",
     "import/extensions": [
       "warn",
       "ignorePackages",

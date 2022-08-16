@@ -1,8 +1,10 @@
-const solution = require("./solution");
+const solution = require("./solution.ts");
 
 const tests = {
-  1: [["boo"], "obo"],
-  2: [["qwertyuiop"], "yutiroepwq"],
+  1: [["boo", "obb"], false],
+  2: [["qwerty", "ytrewq"], true],
+  3: [["gogogog", "ggggooo"], true],
+  4: [["as", "ae"], false],
 };
 
 Object.keys(tests).forEach((testKey) => {
