@@ -37,6 +37,7 @@ module.exports = {
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": ["error"],
     "no-unused-expressions": "warn",
+    "no-nested-ternary": "off",
     "import/extensions": [
       "warn",
       "ignorePackages",
