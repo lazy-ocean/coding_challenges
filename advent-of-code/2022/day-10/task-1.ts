@@ -210,7 +210,8 @@ const findSignalStrengths = (data: string[]): number => {
   let currentCycle = 1;
   let x = 1;
 
-  const checkCycle = () => {
+  const executeCycle = () => {
+    currentCycle++;
     if (cycles.includes(currentCycle)) res += x * currentCycle;
   };
 
@@ -218,14 +219,11 @@ const findSignalStrengths = (data: string[]): number => {
     const [command, n] = signal.split(" ");
 
     if (command === Commands.noop) {
-      currentCycle++;
-      checkCycle();
+      executeCycle();
     } else {
-      currentCycle++;
-      checkCycle();
+      executeCycle();
       x += Number(n);
-      currentCycle++;
-      checkCycle();
+      executeCycle();
     }
   });
   return res;
