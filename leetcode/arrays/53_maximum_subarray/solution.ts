@@ -20,4 +20,21 @@ const maxSubArray = (nums: number[]): number => {
 };
 
 console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4]));
+
+/*
+Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest product and return its result.
+
+A subarray is a contiguous part of an array.
+*/
+
+const findMaxProduct = (arr) => {
+  let max = Number.MIN_SAFE_INTEGER;
+
+  for (let i = 0; i < arr.length - 1; i++) {
+    max = Math.max(arr[i] * arr[i + 1], max);
+  }
+
+  return max;
+};
+
 module.exports = maxSubArray;
