@@ -37,7 +37,7 @@ const tests = {
 4. To execute your code on every save:
 
 ```
-$ nodemon ./folder-name/solution.js
+$ bun run ./folder-name/solution.js
 ```
 
 5. To run tests:
